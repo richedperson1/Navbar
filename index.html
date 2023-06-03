@@ -55,6 +55,8 @@
         padding-inline: 30px;
         background-color: var(--background-color);
         border-bottom: 2px solid red;
+        position: relative;
+        transition: 1s ease;
     }
 
 
@@ -64,6 +66,7 @@
         gap: 20px;
         font-size: 1.3rem;
         font-weight: 900;
+        transition: 1s ease;
     }
 
     .menu-cards-details .items {
@@ -88,14 +91,26 @@
 
     i {
         cursor: pointer;
+        transition: 0.5s ease;
     }
 
     .rotate-180 {
-        transform: translateZ(180deg);
+        transform: rotate(-270deg);
+
     }
+
+
 
     /* Media query */
     @media screen and (900px > width) {
+        nav.nav-bar {
+            justify-content: space-evenly;
+            flex-direction: column;
+            gap: 20px;
+            /* height: 100px; */
+            /* overflow: hidden; */
+        }
+
         .social-media {
             display: none !important;
         }
@@ -104,11 +119,27 @@
             display: flex !important;
             font-size: 2rem;
             transition: 1s ease;
+            position: absolute;
+            right: 10px;
+            top: 4%;
+
         }
 
         div.menu-cards-details {
             display: none;
+            transition: 1s ease;
+
         }
+
+        .toggleFun4Menu {
+            display: flex !important;
+            flex-direction: column;
+            /* position: absolute; */
+            align-items: flex-start;
+            top: 20%;
+            transition: 1.5s ease;
+        }
+
     }
 </style>
 
@@ -135,12 +166,13 @@
                 <i class="fa-brands fa-twitter"></i>
                 <i class="fa-brands fa-github"></i>
             </div>
-
-            <div class="toggleSwitch none-display flex flex-center-xy">
-                <i class="fa-solid fa-bars"></i>
-            </div>
         </nav>
+
+        <div class="toggleSwitch none-display flex flex-center-xy">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
+    <script src="./script.js"></script>
 </body>
 
 </html>
