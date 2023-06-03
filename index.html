@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav-Bars</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playball&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        background-color: #11110f;
+    }
+
+    :root {
+        --background-color: #fefe5d;
+    }
+
+    /* Utils function */
+    .flex {
+        display: flex;
+    }
+
+    .flex-center-xy {
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .none-display {
+        display: none;
+    }
+
+    /* Feature wise class function */
+
+    nav.nav-bar {
+        justify-content: space-between;
+        padding: 20px;
+        padding-inline: 30px;
+        background-color: var(--background-color);
+        border-bottom: 2px solid red;
+    }
+
+
+
+    /*menu card hovering  */
+    .menu-cards-details {
+        gap: 20px;
+        font-size: 1.3rem;
+        font-weight: 900;
+    }
+
+    .menu-cards-details .items {
+        cursor: pointer;
+    }
+
+    div.title h2 {
+        font-size: 2.3rem;
+        font-family: 'Rubik Puddles', cursive;
+        color: rgb(238, 42, 20);
+    }
+
+    span.second-letter {
+        color: #11110f;
+    }
+
+    /* Social media icons */
+    .social-media {
+        gap: 20px;
+        font-size: 2rem;
+    }
+
+    i {
+        cursor: pointer;
+    }
+
+    .rotate-180 {
+        transform: translateZ(180deg);
+    }
+
+    /* Media query */
+    @media screen and (900px > width) {
+        .social-media {
+            display: none !important;
+        }
+
+        .toggleSwitch {
+            display: flex !important;
+            font-size: 2rem;
+            transition: 1s ease;
+        }
+
+        div.menu-cards-details {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+
+    <header class="main-container">
+        <nav class="nav-bar flex">
+            <div class="title">
+                <h2>Coding
+                    <span class="second-letter">
+                        Addict
+                    </span>
+                </h2>
+            </div>
+            <div class="menu-cards-details flex flex-center-xy ">
+                <p class="items">Home</p>
+                <p class="items">About</p>
+                <p class="items">Projects</p>
+                <p class="items">Contact us</p>
+            </div>
+            <div class="social-media flex flex-center-xy">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+
+            <div class="toggleSwitch none-display flex flex-center-xy">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+</body>
+
+</html>
